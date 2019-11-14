@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: test.data.mn
+---
+testFramework: junit
+sourceLanguage: java
