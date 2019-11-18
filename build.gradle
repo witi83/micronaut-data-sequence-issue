@@ -42,8 +42,8 @@ dependencies {
 
     runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
     runtimeOnly "com.h2database:h2"
-    runtimeOnly "io.micronaut.configuration:micronaut-jdbc-hikari"
-    // runtimeOnly "io.micronaut.configuration:micronaut-jdbc-tomcat"
+    //runtimeOnly "io.micronaut.configuration:micronaut-jdbc-hikari"
+    runtimeOnly "io.micronaut.configuration:micronaut-jdbc-tomcat"
 
     testAnnotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"

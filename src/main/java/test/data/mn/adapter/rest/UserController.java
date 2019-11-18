@@ -1,9 +1,7 @@
 package test.data.mn.adapter.rest;
 
-import java.util.concurrent.CompletableFuture;
-
 import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.Post;
 import test.data.mn.domain.User;
 import test.data.mn.domain.UserRepository;
 
@@ -16,8 +14,8 @@ final class UserController {
         this.repo = repo;
     }
 
-    @Get(value = "/{id}")
-    CompletableFuture<User> get(long id) {
-        return repo.findById(id);
+    @Post
+    User create(String name) {
+        return repo.save(new User(name));
     }
 }
